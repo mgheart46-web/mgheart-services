@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Devis gratuit — Contact | MGHEART Services</title>
+<meta name="description" content="Demandez votre devis gratuit à MGHEART Services : rénovation et nettoyage de locaux. Visite d'expertise gratuite. Le Malesherbois, Loiret et Île-de-France. Téléphone : 06 50 15 29 89.">
+<link rel="canonical" href="https://www.mgheart-services.fr/contact.html">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="entete">
+  <div class="conteneur">
+    <a class="logo" href="index.html">MGHEART<span> Services</span></a>
+    <nav aria-label="Navigation principale">
+      <ul>
+        <li><a href="services.html">Nos services</a></li>
+        <li><a href="realisations.html">Réalisations</a></li>
+        <li><a href="zone-intervention.html">Zone d'intervention</a></li>
+        <li><a href="contact.html">Devis gratuit</a></li>
+      </ul>
+    </nav>
+    <a class="bouton-entete" href="tel:+33650152989">06 50 15 29 89</a>
+  </div>
+</header>
+
+<main>
+
+<section class="section">
+  <div class="conteneur">
+    <h1>Demandez votre devis gratuit</h1>
+    <p class="chapeau">
+      Décrivez votre projet en quelques lignes. Nous vous répondons rapidement,
+      avec un devis gratuit et négociable. Si votre chantier le nécessite, un
+      expert peut se déplacer sur place sans frais.
+    </p>
+  </div>
+</section>
+
+<section class="section section-grise">
+  <div class="conteneur">
+    <div class="grille">
+
+      <div>
+        <h2>Formulaire de devis</h2>
+        <!--
+          Ce formulaire fonctionne sans service externe : à l'envoi, il ouvre
+          le logiciel de mail du visiteur avec la demande déjà rédigée,
+          adressée à mgheart46@gmail.com. Pour le remplacer par un envoi
+          automatique, il suffit plus tard de pointer l'attribut action vers
+          un service tel que Formspree.
+        -->
+        <form class="formulaire" id="formulaire-devis" novalidate>
+          <div class="champ">
+            <label for="nom">Nom et prénom *</label>
+            <input type="text" id="nom" name="nom" required autocomplete="name" placeholder="Ex. Marie Dupont">
+            <p class="erreur" id="erreur-nom" hidden>Merci d'indiquer votre nom.</p>
+          </div>
+
+          <div class="champ">
+            <label for="telephone">Téléphone *</label>
+            <input type="tel" id="telephone" name="telephone" required autocomplete="tel" placeholder="Ex. 06 12 34 56 78">
+            <p class="erreur" id="erreur-telephone" hidden>Merci d'indiquer un numéro où vous joindre.</p>
+          </div>
+
+          <div class="champ">
+            <label for="email">Adresse e-mail</label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="Ex. marie.dupont@exemple.fr">
+            <p class="erreur" id="erreur-email" hidden>Cet e-mail ne semble pas valide.</p>
+          </div>
+
+          <div class="champ">
+            <label for="ville">Ville et code postal du chantier *</label>
+            <input type="text" id="ville" name="ville" required autocomplete="address-level2" placeholder="Ex. Pithiviers 45300">
+            <p class="erreur" id="erreur-ville" hidden>Merci d'indiquer le lieu des travaux.</p>
+          </div>
+
+          <div class="champ">
+            <label for="prestation">Prestation souhaitée *</label>
+            <select id="prestation" name="prestation" required>
+              <option value="">Choisissez une prestation</option>
+              <option>Traitement de sol — marbre</option>
+              <option>Traitement de sol — terrazzo / granito</option>
+              <option>Ponçage et vitrification de parquet</option>
+              <option>Carrelage / tomettes / parement</option>
+              <option>Plâtrerie</option>
+              <option>Peinture / traitement des murs</option>
+              <option>Isolation / aménagement de combles</option>
+              <option>Électricité / plomberie</option>
+              <option>Nettoyage professionnel (locaux)</option>
+              <option>Nettoyage domestique</option>
+              <option>Montage de meubles / débarras</option>
+              <option>Plusieurs prestations / rénovation complète</option>
+              <option>Autre demande</option>
+            </select>
+            <p class="erreur" id="erreur-prestation" hidden>Merci de choisir une prestation.</p>
+          </div>
+
+          <div class="champ">
+            <label for="surface">Surface approximative (m²)</label>
+            <input type="text" id="surface" name="surface" inputmode="numeric" placeholder="Ex. 45">
+            <p class="mention-champ">Facultatif, mais cela nous permet de vous donner un ordre de prix plus juste.</p>
+          </div>
+
+          <div class="champ">
+            <label for="delai">Délai souhaité</label>
+            <select id="delai" name="delai">
+              <option value="">Peu importe / à définir</option>
+              <option>Dès que possible</option>
+              <option>Dans le mois</option>
+              <option>Dans les trois mois</option>
+              <option>Plus tard, je me renseigne</option>
+            </select>
+          </div>
+
+          <div class="champ">
+            <label for="message">Décrivez votre projet *</label>
+            <textarea id="message" name="message" required placeholder="État actuel du support, contraintes d'accès, étage, ce que vous souhaitez obtenir…"></textarea>
+            <p class="mention-champ">Si vous avez des photos, vous pourrez les joindre directement depuis votre logiciel de mail avant l'envoi.</p>
+            <p class="erreur" id="erreur-message" hidden>Merci de décrire brièvement votre projet.</p>
+          </div>
+
+          <div class="champ">
+            <label for="consentement" style="font-weight:400; font-size:.9rem; display:flex; gap:10px; align-items:flex-start">
+              <input type="checkbox" id="consentement" name="consentement" required style="width:auto; margin-top:5px">
+              <span>J'accepte que mes informations soient utilisées pour être recontacté au sujet de ma demande. *</span>
+            </label>
+            <p class="erreur" id="erreur-consentement" hidden>Merci de cocher cette case pour que nous puissions vous répondre.</p>
+          </div>
+
+          <button class="bouton" type="submit" id="bouton-envoi">Préparer ma demande de devis</button>
+
+          <p class="mention-champ">
+            * Champs obligatoires. Vos données servent uniquement à traiter votre demande de devis
+            et ne sont transmises à personne. En cliquant, votre logiciel de mail s'ouvre avec
+            la demande déjà rédigée : vérifiez-la puis envoyez-la.
+          </p>
+
+          <p class="recap" id="recap" hidden></p>
+        </form>
+      </div>
+
+      <div>
+        <h2>Ou contactez-nous directement</h2>
+        <div class="contact-direct">
+          <ul class="coordonnees">
+            <li>
+              <strong>Téléphone</strong><br>
+              <a href="tel:+33650152989">06 50 15 29 89</a>
+            </li>
+            <li>
+              <strong>E-mail</strong><br>
+              <a href="mailto:mgheart46@gmail.com">mgheart46@gmail.com</a>
+            </li>
+            <li>
+              <strong>Adresse</strong><br>
+              24, rue de l'Église Saint-Martin<br>
+              45330 Le Malesherbois, France
+            </li>
+            <li>
+              <strong>SIRET</strong><br>
+              100 356 450 00013
+            </li>
+            <li>
+              <strong>Facebook</strong><br>
+              <a href="https://www.facebook.com/mghservices45" rel="noopener">facebook.com/mghservices45</a>
+            </li>
+          </ul>
+        </div>
+
+        <h3 style="margin-top:30px">Ce qui est gratuit</h3>
+        <ul>
+          <li>La préparation et l'envoi du devis</li>
+          <li>Le déplacement d'un expert sur place pour évaluer les travaux</li>
+          <li>Le conseil sur la solution technique adaptée à votre support</li>
+        </ul>
+
+        <h3>Nos délais</h3>
+        <p>
+          Nos équipes sont prêtes à être déployées en moins de 48 heures pour
+          intervenir sur votre chantier. Nous répondons à toutes les demandes
+          d'information dans les plus brefs délais.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="conteneur prose">
+    <h2>Comment se déroule une demande de devis</h2>
+    <p>
+      Vous nous contactez par téléphone, par e-mail ou via le formulaire
+      ci-dessus. Nous vous rappelons pour préciser votre besoin : nature des
+      travaux, surface, état du support, contraintes d'accès et délai
+      souhaité. Lorsque le projet le justifie, nous fixons un rendez-vous pour
+      une visite d'expertise gratuite sur place, qui nous permet de chiffrer
+      précisément les travaux. Vous recevez ensuite votre devis, gratuitement
+      et sans engagement.
+    </p>
+    <p>
+      Pour aller plus vite, vous pouvez nous envoyer des photos de la pièce ou
+      du support concerné : cela nous permet souvent de vous orienter dès le
+      premier échange.
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer class="pied">
+  <div class="conteneur">
+    <div>
+      <p class="pied-titre">MGHEART Services</p>
+      <p>
+        24, rue de l'Église Saint-Martin<br>
+        45330 Le Malesherbois, France
+      </p>
+    </div>
+    <div>
+      <p class="pied-titre">Contact</p>
+      <p>
+        Téléphone : <a href="tel:+33650152989">06 50 15 29 89</a><br>
+        E-mail : <a href="mailto:mgheart46@gmail.com">mgheart46@gmail.com</a>
+      </p>
+    </div>
+    <div>
+      <p class="pied-titre">Le site</p>
+      <p>
+        <a href="services.html">Nos services</a><br>
+        <a href="realisations.html">Réalisations</a><br>
+        <a href="zone-intervention.html">Zone d'intervention</a><br>
+        <a href="contact.html">Devis gratuit</a><br>
+        <a href="mentions-legales.html">Mentions légales</a>
+      </p>
+      <p style="margin-top:14px">
+        <a href="https://www.facebook.com/mghservices45" rel="noopener">Suivez-nous sur Facebook</a>
+      </p>
+    </div>
+  </div>
+  <p class="pied-bas">SIRET 100 356 450 00013 — © 2026 MGHEART Services</p>
+</footer>
+
+
+<script>
+(function () {
+  var DESTINATAIRE = "mgheart46@gmail.com";
+
+  var form = document.getElementById("formulaire-devis");
+  if (!form) return;
+
+  var champs = [
+    { id: "nom",          obligatoire: true },
+    { id: "telephone",    obligatoire: true },
+    { id: "email",        obligatoire: false, email: true },
+    { id: "ville",        obligatoire: true },
+    { id: "prestation",   obligatoire: true },
+    { id: "message",      obligatoire: true },
+    { id: "consentement", obligatoire: true, case: true }
+  ];
+
+  function valeur(id) {
+    var el = document.getElementById(id);
+    if (!el) return "";
+    return el.type === "checkbox" ? (el.checked ? "oui" : "") : el.value.trim();
+  }
+
+  function afficherErreur(id, montre) {
+    var el = document.getElementById(id);
+    var msg = document.getElementById("erreur-" + id);
+    if (el) el.setAttribute("aria-invalid", montre ? "true" : "false");
+    if (msg) msg.hidden = !montre;
+  }
+
+  function valider() {
+    var premierInvalide = null;
+
+    champs.forEach(function (c) {
+      var v = valeur(c.id);
+      var invalide = false;
+
+      if (c.obligatoire && !v) invalide = true;
+      if (!invalide && c.email && v && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) invalide = true;
+      if (!invalide && c.id === "telephone" && v && v.replace(/[^0-9]/g, "").length < 9) invalide = true;
+
+      afficherErreur(c.id, invalide);
+      if (invalide && !premierInvalide) premierInvalide = document.getElementById(c.id);
+    });
+
+    return premierInvalide;
+  }
+
+  // Effacer le message d'erreur dès que l'utilisateur corrige
+  champs.forEach(function (c) {
+    var el = document.getElementById(c.id);
+    if (!el) return;
+    var evenement = el.type === "checkbox" || el.tagName === "SELECT" ? "change" : "input";
+    el.addEventListener(evenement, function () { afficherErreur(c.id, false); });
+  });
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    var premierInvalide = valider();
+    if (premierInvalide) {
+      premierInvalide.focus();
+      premierInvalide.scrollIntoView({ behavior: "smooth", block: "center" });
+      return;
+    }
+
+    var lignes = [
+      "Nom et prénom : " + valeur("nom"),
+      "Téléphone : " + valeur("telephone"),
+      "E-mail : " + (valeur("email") || "non renseigné"),
+      "Ville et code postal du chantier : " + valeur("ville"),
+      "Prestation souhaitée : " + valeur("prestation"),
+      "Surface approximative : " + (valeur("surface") ? valeur("surface") + " m²" : "non renseignée"),
+      "Délai souhaité : " + (valeur("delai") || "à définir"),
+      "",
+      "Description du projet :",
+      valeur("message"),
+      "",
+      "---",
+      "Demande envoyée depuis le site mgheart-services.fr"
+    ];
+
+    var corps = lignes.join("\n");
+    var sujet = "Demande de devis - " + valeur("prestation") + " - " + valeur("ville");
+    var lien = "mailto:" + DESTINATAIRE +
+               "?subject=" + encodeURIComponent(sujet) +
+               "&body=" + encodeURIComponent(corps);
+
+    window.location.href = lien;
+
+    var recap = document.getElementById("recap");
+    if (recap) {
+      recap.hidden = false;
+      recap.innerHTML = "<strong>Votre demande est prête.</strong>" +
+        "Votre logiciel de mail vient de s'ouvrir avec le message déjà rédigé : " +
+        "vérifiez-le, ajoutez vos photos si vous en avez, puis cliquez sur Envoyer. " +
+        "Si rien ne s'est ouvert, écrivez-nous directement à " +
+        '<a href="mailto:' + DESTINATAIRE + '">' + DESTINATAIRE + "</a> " +
+        "ou appelez le <a href=\"tel:+33650152989\">06 50 15 29 89</a>.";
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
